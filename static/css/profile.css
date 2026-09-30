@@ -1,0 +1,213 @@
+/* ── Profile hero ─────────────────────────────────────────── */
+.profile-hero {
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-family: var(--font-display);
+    margin: 0 auto 1rem;
+}
+
+.profile-name {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+}
+
+.profile-meta {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+}
+
+/* ── Summary stats row ────────────────────────────────────── */
+.profile-stats-section {
+    background: var(--paper-card);
+    border-bottom: 1px solid var(--border);
+    padding: 1.75rem 2rem;
+}
+
+.profile-stats-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* ── Content grid ─────────────────────────────────────────── */
+.profile-content-section {
+    padding: 2rem 2rem 3rem;
+}
+
+.profile-content-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.profile-panel-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.875rem;
+}
+
+/* ── Shared card base ─────────────────────────────────────── */
+.profile-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+/* ── Transaction table ────────────────────────────────────── */
+.profile-table-card {
+    overflow: hidden;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.profile-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1.25rem;
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-table td {
+    padding: 0.85rem 1.25rem;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.profile-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.col-date {
+    color: var(--ink-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.col-right { text-align: right; }
+
+.col-amount {
+    font-weight: 500;
+    color: var(--ink);
+    white-space: nowrap;
+}
+
+/* ── Category badges ──────────────────────────────────────── */
+.cat-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cat-badge-food          { background: var(--accent-light);   color: var(--accent); }
+.cat-badge-health        { background: var(--accent-light);   color: var(--accent); }
+.cat-badge-bills         { background: var(--accent-2-light); color: var(--accent-2); }
+.cat-badge-shopping      { background: var(--accent-2-light); color: var(--accent-2); }
+.cat-badge-entertainment { background: var(--paper-warm);     color: var(--ink-soft); border: 1px solid var(--border); }
+.cat-badge-transport     { background: var(--paper-warm);     color: var(--ink-soft); border: 1px solid var(--border); }
+.cat-badge-other         { background: var(--border-soft);    color: var(--ink-muted); }
+
+/* ── Category breakdown ───────────────────────────────────── */
+.profile-breakdown-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.breakdown-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.breakdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breakdown-label {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+}
+
+.breakdown-amount {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.breakdown-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.breakdown-bar {
+    height: 100%;
+    width: var(--bar-pct);
+    border-radius: 999px;
+    transition: width 0.6s ease;
+}
+
+.breakdown-bar-shopping      { background: var(--accent-2); }
+.breakdown-bar-bills         { background: var(--accent-2); }
+.breakdown-bar-food          { background: var(--accent); }
+.breakdown-bar-health        { background: var(--accent); }
+.breakdown-bar-entertainment { background: var(--ink-muted); }
+.breakdown-bar-transport     { background: var(--ink-faint); }
+.breakdown-bar-other         { background: var(--border); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 800px) {
+    .profile-content-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-stats-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats-section,
+    .profile-content-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
